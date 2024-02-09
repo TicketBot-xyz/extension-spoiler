@@ -16,14 +16,14 @@
 	    parseHTML() {
 	        return [
 	            {
-	                tag: "details",
+	                tag: `span[data-type="${this.name}"]`,
 	            },
 	        ];
 	    },
 	    renderHTML({ HTMLAttributes }) {
 	        return [
-	            "details",
-	            core.mergeAttributes(this.options.HTMLAttributes, HTMLAttributes),
+	            "span",
+	            core.mergeAttributes({ "data-type": this.name }, this.options.HTMLAttributes, HTMLAttributes),
 	            0,
 	        ];
 	    },

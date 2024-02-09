@@ -43,15 +43,19 @@ export const Spoiler = Mark.create<SpoilerOptions>({
 	parseHTML() {
 		return [
 			{
-				tag: "details",
+				tag: `span[data-type="${this.name}"]`,
 			},
 		];
 	},
 
 	renderHTML({ HTMLAttributes }) {
 		return [
-			"details",
-			mergeAttributes(this.options.HTMLAttributes, HTMLAttributes),
+			"span",
+			mergeAttributes(
+				{ "data-type": this.name },
+				this.options.HTMLAttributes,
+				HTMLAttributes
+			),
 			0,
 		];
 	},
