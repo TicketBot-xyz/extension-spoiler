@@ -19,7 +19,7 @@
 	"main": "dist/index.cjs",
 	"module": "dist/index.js",
 	"umd": "dist/index.umd.js",
-	"types": "dist/packages/extension-bold/src/index.d.ts",
+	"types": "dist/src/index.d.ts",
 	"files": [
 		"src",
 		"dist"
