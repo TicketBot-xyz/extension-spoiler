@@ -1,0 +1,48 @@
+{
+	"name": "@ticketbot/extension-spoiler",
+	"description": "spoiler extension for tiptap",
+	"version": "1.0.0",
+	"homepage": "https://ticketbot.xyz",
+	"keywords": [
+		"tiptap",
+		"tiptap extension"
+	],
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"umd": "dist/index.umd.js",
+	"types": "dist/packages/extension-bold/src/index.d.ts",
+	"files": [
+		"src",
+		"dist"
+	],
+	"devDependencies": {
+		"@atomico/rollup-plugin-sizes": "^1.1.4",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@tiptap/core": "^2.2.2",
+		"rollup": "^4.9.6",
+		"rollup-plugin-auto-external": "^2.0.0",
+		"rollup-plugin-sourcemaps": "^0.6.3",
+		"rollup-plugin-typescript2": "^0.36.0"
+	},
+	"peerDependencies": {
+		"@tiptap/core": "^2.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ticketbot-zyx/extension-spoiler"
+	},
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "rollup -c"
+	}
+}
