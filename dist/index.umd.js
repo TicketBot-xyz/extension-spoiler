@@ -23,7 +23,7 @@
 	    renderHTML({ HTMLAttributes }) {
 	        return [
 	            "span",
-	            core.mergeAttributes({ "data-type": this.name }, this.options.HTMLAttributes, HTMLAttributes),
+	            core.mergeAttributes({ "data-type": this.name, class: "spoiler" }, this.options.HTMLAttributes, HTMLAttributes),
 	            0,
 	        ];
 	    },

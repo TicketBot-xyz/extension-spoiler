@@ -19,7 +19,7 @@ const Spoiler = Mark.create({
     renderHTML({ HTMLAttributes }) {
         return [
             "span",
-            mergeAttributes({ "data-type": this.name }, this.options.HTMLAttributes, HTMLAttributes),
+            mergeAttributes({ "data-type": this.name, class: "spoiler" }, this.options.HTMLAttributes, HTMLAttributes),
             0,
         ];
     },

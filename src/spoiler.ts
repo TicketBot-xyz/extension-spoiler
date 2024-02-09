@@ -52,7 +52,7 @@ export const Spoiler = Mark.create<SpoilerOptions>({
 		return [
 			"span",
 			mergeAttributes(
-				{ "data-type": this.name },
+				{ "data-type": this.name, class: "spoiler" },
 				this.options.HTMLAttributes,
 				HTMLAttributes
 			),
