@@ -1,7 +1,7 @@
 import { Mark, mergeAttributes, markInputRule, markPasteRule } from '@tiptap/core';
 
-const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;
-const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;
+const starInputRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))$/;
+const starPasteRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))/g;
 const Spoiler = Mark.create({
     name: "spoiler",
     addOptions() {
@@ -38,8 +38,8 @@ const Spoiler = Mark.create({
     },
     addKeyboardShortcuts() {
         return {
-            "Mod-b": () => this.editor.commands.toggleSpoiler(),
-            "Mod-B": () => this.editor.commands.toggleSpoiler(),
+            "Mod-l": () => this.editor.commands.toggleSpoiler(),
+            "Mod-L": () => this.editor.commands.toggleSpoiler(),
         };
     },
     addInputRules() {

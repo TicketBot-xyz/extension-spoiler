@@ -4,8 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var core = require('@tiptap/core');
 
-const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;
-const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;
+const starInputRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))$/;
+const starPasteRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))/g;
 const Spoiler = core.Mark.create({
     name: "spoiler",
     addOptions() {
@@ -42,8 +42,8 @@ const Spoiler = core.Mark.create({
     },
     addKeyboardShortcuts() {
         return {
-            "Mod-b": () => this.editor.commands.toggleSpoiler(),
-            "Mod-B": () => this.editor.commands.toggleSpoiler(),
+            "Mod-l": () => this.editor.commands.toggleSpoiler(),
+            "Mod-L": () => this.editor.commands.toggleSpoiler(),
         };
     },
     addInputRules() {

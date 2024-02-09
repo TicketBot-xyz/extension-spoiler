@@ -4,8 +4,8 @@
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["@ticketbot/extension-spoiler"] = {}, global.core));
 })(this, (function (exports, core) { 'use strict';
 
-	const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;
-	const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;
+	const starInputRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))$/;
+	const starPasteRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))/g;
 	const Spoiler = core.Mark.create({
 	    name: "spoiler",
 	    addOptions() {
@@ -42,8 +42,8 @@
 	    },
 	    addKeyboardShortcuts() {
 	        return {
-	            "Mod-b": () => this.editor.commands.toggleSpoiler(),
-	            "Mod-B": () => this.editor.commands.toggleSpoiler(),
+	            "Mod-l": () => this.editor.commands.toggleSpoiler(),
+	            "Mod-L": () => this.editor.commands.toggleSpoiler(),
 	        };
 	    },
 	    addInputRules() {

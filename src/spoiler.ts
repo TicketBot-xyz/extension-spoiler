@@ -28,8 +28,8 @@ declare module "@tiptap/core" {
 	}
 }
 
-export const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;
-export const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;
+export const starInputRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))$/;
+export const starPasteRegex = /(?:^|\s)((?:\|\|)((?:[^*]+))(?:\|\|))/g;
 
 export const Spoiler = Mark.create<SpoilerOptions>({
 	name: "spoiler",
